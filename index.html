@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tilskuddslistene</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  
+  
+</head>
+
+<body>
+  <div id="lab-til__scroll_to"></div>
+
+  <div class="lab-til">
+    <h2>Tilskuddslisten 2021</h2>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      style="width:0;height:0;position:absolute;overflow:hidden;" version="1.1">
+      <defs>
+        <symbol viewBox="0 0 12 8" id="down-caret">
+          <title>Vis mer</title>
+          <polyline fill="none" stroke="#333" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5"
+            points="0.9,1.1 6.1,6.9 11.1,1.1 " />
+        </symbol>
+      </defs>
+    </svg>
+    <div class="lab-til__form">
+      <input id="search-input" class="lab-til__form-name" type="text" placeholder="Søk på navn">
+      <select class="lab-til__form-munic" id="kommune-liste"></select>
+    </div>
+
+    <!-- knapper-->
+    <div class="lab-til__meta">
+      <button class="lab-til__button" id="prevPage" onclick="prevPage()">Forrige</button>
+      <div class="lab-til__meta_number">Side <span id="currentPage">1</span> av <span id="totalPage">1</span></div>
+      <div class="lab-til__meta_number">Antall treff: <span id="treff"> 10</span></div>
+      <button class="lab-til__button" id="nextPage" onclick="nextPage()">Neste</button>
+    </div>
+
+
+    <div class="lab-til__list">
+      <div class="lab-til__list-header">
+        <div>Organisasjon</div>
+        <div>Kommune</div>
+        <div>Sum</div>
+        <div></div>
+      </div>
+      <div class="lab-til__entries" id="lab-til__entries">
+        <div class="lab-til__entry" data-orgnr="998866383" onclick="toggleInfo(this)">
+          <div>
+            <div>BRØDRENE FREBERG DA</div>
+            <div>FÆRDER</div>
+            <div>6 035 054 kr</div>
+            <div><svg>
+                <use xlink:href="#down-caret"></use>
+              </svg></div>
+          </div>
+          <div>
+            <div>Org.nr. <span class="lab-til__id">998866383</span></div>
+            <div>Hvorav avløsertilskudd: <span>0 kr</span></div>
+            <div class="lab-til__tilskudd2020">Fjorårets tilskudd <span> </span></div>
+            <div class="lab-til__avløser2020">Hvorav fjoråets avløsertilskudd: <span> </span></div>
+          </div>
+        </div>
+
+        <div class="lab-til__entry" data-orgnr="992600713" onclick="toggleInfo(this)">
+          <div>
+            <div>LUNDSTAD GRØNT AS AS</div>
+            <div>ØSTRE TOTEN</div>
+            <div>5 473 930 kr</div>
+            <div><svg>
+                <use xlink:href="#down-caret"></use>
+              </svg></div>
+          </div>
+          <div>
+            <div>Org.nr. <span class="lab-til__id">992600713</span></div>
+            <div>Hvorav avløsertilskudd: <span>0 kr</span></div>
+            <div class="lab-til__tilskudd2020">Fjorårets tilskudd <span> </span></div>
+            <div class="lab-til__avløser2020">Hvorav fjoråets avløsertilskudd: <span> </span></div>
+          </div>
+        </div>
+
+        <div class="lab-til__entry" data-orgnr="987172592" onclick="toggleInfo(this)">
+          <div>
+            <div>JAMTSVE/HANEMO SAMDRIFT DA</div>
+            <div>NAMSOS</div>
+            <div>4 082 084 kr</div>
+            <div><svg>
+                <use xlink:href="#down-caret"></use>
+              </svg></div>
+          </div>
+          <div>
+            <div>Org.nr. <span class="lab-til__id">987172592</span></div>
+            <div>Hvorav avløsertilskudd: <span>87 800 kr</span></div>
+            <div class="lab-til__tilskudd2020">Fjorårets tilskudd <span> </span></div>
+            <div class="lab-til__avløser2020">Hvorav fjoråets avløsertilskudd: <span> </span></div>
+          </div>
+        </div>
+
+        <div class="lab-til__entry" data-orgnr="969098520" onclick="toggleInfo(this)">
+          <div>
+            <div>OLE KRISTIAN KARLSRUD</div>
+            <div>NORDRE FOLLO</div>
+            <div>3 536 879 kr</div>
+            <div><svg>
+                <use xlink:href="#down-caret"></use>
+              </svg></div>
+          </div>
+          <div>
+            <div>Org.nr. <span class="lab-til__id">969098520</span></div>
+            <div>Hvorav avløsertilskudd: <span>87 800 kr</span></div>
+            <div class="lab-til__tilskudd2020">Fjorårets tilskudd <span> </span></div>
+            <div class="lab-til__avløser2020">Hvorav fjoråets avløsertilskudd: <span> </span></div>
+          </div>
+        </div>
+
+        <div class="lab-til__entry" data-orgnr="988390747" onclick="toggleInfo(this)">
+          <div>
+            <div>ELSTØEN GARTNERI AS</div>
+            <div>HOLE</div>
+            <div>3 463 720 kr</div>
+            <div><svg>
+                <use xlink:href="#down-caret"></use>
+              </svg></div>
+          </div>
+          <div>
+            <div>Org.nr. <span class="lab-til__id">988390747</span></div>
+            <div>Hvorav avløsertilskudd: <span>0 kr</span></div>
+            <div class="lab-til__tilskudd2020">Fjorårets tilskudd <span> </span></div>
+            <div class="lab-til__avløser2020">Hvorav fjoråets avløsertilskudd: <span> </span></div>
+          </div>
+        </div>
+
+        <div class="lab-til__entry" data-orgnr="998304954" onclick="toggleInfo(this)">
+          <div>
+            <div>ROSNES GÅRDSDRIFT AS</div>
+            <div>HOLMESTRAND</div>
+            <div>3 109 736 kr</div>
+            <div><svg>
+                <use xlink:href="#down-caret"></use>
+              </svg></div>
+          </div>
+          <div>
+            <div>Org.nr. <span class="lab-til__id">998304954</span></div>
+            <div>Hvorav avløsertilskudd: <span>0 kr</span></div>
+            <div class="lab-til__tilskudd2020">Fjorårets tilskudd <span> </span></div>
+            <div class="lab-til__avløser2020">Hvorav fjoråets avløsertilskudd: <span> </span></div>
+          </div>
+        </div>
+
+        <div class="lab-til__entry" data-orgnr="990844011" onclick="toggleInfo(this)">
+          <div>
+            <div>KLØVERBAKKEN SAMDRIFT DA</div>
+            <div>INDRE ØSTFOLD</div>
+            <div>3 019 598 kr</div>
+            <div><svg>
+                <use xlink:href="#down-caret"></use>
+              </svg></div>
+          </div>
+          <div>
+            <div>Org.nr. <span class="lab-til__id">990844011</span></div>
+            <div>Hvorav avløsertilskudd: <span>87 800 kr</span></div>
+            <div class="lab-til__tilskudd2020">Fjorårets tilskudd <span> </span></div>
+            <div class="lab-til__avløser2020">Hvorav fjoråets avløsertilskudd: <span> </span></div>
+          </div>
+        </div>
+
+        <div class="lab-til__entry" data-orgnr="990131244" onclick="toggleInfo(this)">
+          <div>
+            <div>VAALER SAMDRIFT DA</div>
+            <div>EIDSVOLL</div>
+            <div>2 894 222 kr</div>
+            <div><svg>
+                <use xlink:href="#down-caret"></use>
+              </svg></div>
+          </div>
+          <div>
+            <div>Org.nr. <span class="lab-til__id">990131244</span></div>
+            <div>Hvorav avløsertilskudd: <span>87 800 kr</span></div>
+            <div class="lab-til__tilskudd2020">Fjorårets tilskudd <span> </span></div>
+            <div class="lab-til__avløser2020">Hvorav fjoråets avløsertilskudd: <span> </span></div>
+          </div>
+        </div>
+
+        <div class="lab-til__entry" data-orgnr="974352869" onclick="toggleInfo(this)">
+          <div>
+            <div>JO POPPE</div>
+            <div>FREDRIKSTAD</div>
+            <div>2 744 778 kr</div>
+            <div><svg>
+                <use xlink:href="#down-caret"></use>
+              </svg></div>
+          </div>
+          <div>
+            <div>Org.nr. <span class="lab-til__id">974352869</span></div>
+            <div>Hvorav avløsertilskudd: <span>87 800 kr</span></div>
+            <div class="lab-til__tilskudd2020">Fjorårets tilskudd <span> </span></div>
+            <div class="lab-til__avløser2020">Hvorav fjoråets avløsertilskudd: <span> </span></div>
+          </div>
+        </div>
+
+        <div class="lab-til__entry" data-orgnr="982254868" onclick="toggleInfo(this)">
+          <div>
+            <div>ULLENES MORTEN</div>
+            <div>STAVANGER</div>
+            <div>2 691 655 kr</div>
+            <div><svg>
+                <use xlink:href="#down-caret"></use>
+              </svg></div>
+          </div>
+          <div>
+            <div>Org.nr. <span class="lab-til__id">982254868</span></div>
+            <div>Hvorav avløsertilskudd: <span>87 800 kr</span></div>
+            <div class="lab-til__tilskudd2020">Fjorårets tilskudd <span> </span></div>
+            <div class="lab-til__avløser2020">Hvorav fjoråets avløsertilskudd: <span> </span></div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script src="https://tunmedia.s3.us-east-2.amazonaws.com/natlab/scripts/tilskuddsliste2021-mk5.js"></script>
+</body>
+
+</html>
