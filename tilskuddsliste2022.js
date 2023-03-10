@@ -227,7 +227,7 @@ input.on('keydown', function () {
     clearTimeout(typingTimer);
 })
 
-    
+
 function doneTyping() {
     page = 1; // stiller siden tilbake til 1
 
@@ -241,135 +241,135 @@ function doneTyping() {
         pages = 1;
         data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; //placehodler for 10høyeste
         refreshMeta();
-         table.innerHTML = " " // `<div class="lab-til__entry" onclick="toggleInfo(this)">
-// <div>
-//     <div>BRØDRENE FREBERG DA</div>
-//     <div>FÆRDER</div>
-//     <div>6 035 054 kr</div>
-//     <div><svg><use xlink:href="#down-caret"></use></svg></div>
-// </div>
-// <div>
-//     <div>Org.nr. <span class="lab-til__id">998866383</span></div>
-//     <div>Hvorav avløsertilskudd: <span>0 kr</span></div>
-// </div>
-// </div>
+        table.innerHTML = `<div class="lab-til__entry" onclick="toggleInfo(this)">
+<div>
+    <div>LUNDSTAD GRØNT AS</div>
+    <div>ØSTRE TOTEN</div>
+    <div>7 192 466 kr</div>
+    <div><svg><use xlink:href="#down-caret"></use></svg></div>
+</div>
+<div>
+    <div>Org.nr. <span class="lab-til__id">992600713</span></div>
+    <div>Hvorav avløsertilskudd: <span>0 kr</span></div>
+</div>
+</div>
 
-// <div class="lab-til__entry" onclick="toggleInfo(this)">
-// <div>
-//     <div>LUNDSTAD GRØNT AS AS</div>
-//     <div>ØSTRE TOTEN</div>
-//     <div>5 473 930 kr</div>
-//     <div><svg><use xlink:href="#down-caret"></use></svg></div>
-// </div>
-// <div>
-//     <div>Org.nr. <span class="lab-til__id">992600713</span></div>
-//     <div>Hvorav avløsertilskudd: <span>0 kr</span></div>
-// </div>
-// </div>
+<div class="lab-til__entry" onclick="toggleInfo(this)">
+<div>
+    <div>BRØDRENE FREBERG DA</div>
+    <div>Færder</div>
+    <div>6 233 094 kr</div>
+    <div><svg><use xlink:href="#down-caret"></use></svg></div>
+</div>
+<div>
+    <div>Org.nr. <span class="lab-til__id">998866383</span></div>
+    <div>Hvorav avløsertilskudd: <span>0 kr</span></div>
+</div>
+</div>
 
-// <div class="lab-til__entry" onclick="toggleInfo(this)">
-// <div>
-//     <div>JAMTSVE/HANEMO SAMDRIFT DA</div>
-//     <div>NAMSOS</div>
-//     <div>4 082 084 kr</div>
-//     <div><svg><use xlink:href="#down-caret"></use></svg></div>
-// </div>
-// <div>
-//     <div>Org.nr. <span class="lab-til__id">987172592</span></div>
-//     <div>Hvorav avløsertilskudd: <span>87 800 kr</span></div>
-// </div>
-// </div>
+<div class="lab-til__entry" onclick="toggleInfo(this)">
+<div>
+    <div>JAMTSVE/HANEMO SAMDRIFT DA</div>
+    <div>NAMSOS</div>
+    <div>5 428 713 kr</div>
+    <div><svg><use xlink:href="#down-caret"></use></svg></div>
+</div>
+<div>
+    <div>Org.nr. <span class="lab-til__id">987172592</span></div>
+    <div>Hvorav avløsertilskudd: <span>96 580 kr</span></div>
+</div>
+</div>
 
-// <div class="lab-til__entry" onclick="toggleInfo(this)">
-// <div>
-//     <div>OLE KRISTIAN KARLSRUD</div>
-//     <div>NORDRE FOLLO</div>
-//     <div>3 536 879 kr</div>
-//     <div><svg><use xlink:href="#down-caret"></use></svg></div>
-// </div>
-// <div>
-//     <div>Org.nr. <span class="lab-til__id">969098520</span></div>
-//     <div>Hvorav avløsertilskudd: <span>87 800 kr</span></div>
-// </div>
-// </div>
+<div class="lab-til__entry" onclick="toggleInfo(this)">
+<div>
+    <div>OLE KRISTIAN KARLSRUD</div>
+    <div>NORDRE FOLLO</div>
+    <div>4 420 334 kr</div>
+    <div><svg><use xlink:href="#down-caret"></use></svg></div>
+</div>
+<div>
+    <div>Org.nr. <span class="lab-til__id">969098520</span></div>
+    <div>Hvorav avløsertilskudd: <span>96 580 kr</span></div>
+</div>
+</div>
 
-// <div class="lab-til__entry" onclick="toggleInfo(this)">
-// <div>
-//     <div>ELSTØEN GARTNERI AS</div>
-//     <div>HOLE</div>
-//     <div>3 463 720 kr</div>
-//     <div><svg><use xlink:href="#down-caret"></use></svg></div>
-// </div>
-// <div>
-//     <div>Org.nr. <span class="lab-til__id">988390747</span></div>
-//     <div>Hvorav avløsertilskudd: <span>0 kr</span></div>
-// </div>
-// </div>
+<div class="lab-til__entry" onclick="toggleInfo(this)">
+<div>
+    <div>ELSTØEN GARTNERI AS</div>
+    <div>HOLE</div>
+    <div>4 316 850 kr</div>
+    <div><svg><use xlink:href="#down-caret"></use></svg></div>
+</div>
+<div>
+    <div>Org.nr. <span class="lab-til__id">988390747</span></div>
+    <div>Hvorav avløsertilskudd: <span>0 kr</span></div>
+</div>
+</div>
 
-// <div class="lab-til__entry" onclick="toggleInfo(this)">
-// <div>
-//     <div>ROSNES GÅRDSDRIFT AS</div>
-//     <div>HOLMESTRAND</div>
-//     <div>3 109 736 kr</div>
-//     <div><svg><use xlink:href="#down-caret"></use></svg></div>
-// </div>
-// <div>
-//     <div>Org.nr. <span class="lab-til__id">998304954</span></div>
-//     <div>Hvorav avløsertilskudd: <span>0 kr</span></div>
-// </div>
-// </div>
+<div class="lab-til__entry" onclick="toggleInfo(this)">
+<div>
+    <div>KLØVERBAKKEN SAMDRIFT DA</div>
+    <div>INDRE ØSTFOLD</div>
+    <div>3 911 090 kr</div>
+    <div><svg><use xlink:href="#down-caret"></use></svg></div>
+</div>
+<div>
+    <div>Org.nr. <span class="lab-til__id">990844011</span></div>
+    <div>Hvorav avløsertilskudd: <span>96 580 kr</span></div>
+</div>
+</div>
 
-// <div class="lab-til__entry" onclick="toggleInfo(this)">
-// <div>
-//     <div>KLØVERBAKKEN SAMDRIFT DA</div>
-//     <div>INDRE ØSTFOLD</div>
-//     <div>3 019 598 kr</div>
-//     <div><svg><use xlink:href="#down-caret"></use></svg></div>
-// </div>
-// <div>
-//     <div>Org.nr. <span class="lab-til__id">990844011</span></div>
-//     <div>Hvorav avløsertilskudd: <span>87 800 kr</span></div>
-// </div>
-// </div>
+<div class="lab-til__entry" onclick="toggleInfo(this)">
+<div>
+    <div>GAMKINN LANDBRUK V/ JENS PETTER GAMKINN</div>
+    <div>GRAN</div>
+    <div>3 904 048 kr</div>
+    <div><svg><use xlink:href="#down-caret"></use></svg></div>
+</div>
+<div>
+    <div>Org.nr. <span class="lab-til__id">973053515</span></div>
+    <div>Hvorav avløsertilskudd: <span>96 580 kr</span></div>
+</div>
+</div>
 
-// <div class="lab-til__entry" onclick="toggleInfo(this)">
-// <div>
-//     <div>VAALER SAMDRIFT DA</div>
-//     <div>EIDSVOLL</div>
-//     <div>2 894 222 kr</div>
-//     <div><svg><use xlink:href="#down-caret"></use></svg></div>
-// </div>
-// <div>
-//     <div>Org.nr. <span class="lab-til__id">990131244</span></div>
-//     <div>Hvorav avløsertilskudd: <span>87 800 kr</span></div>
-// </div>
-// </div>
+<div class="lab-til__entry" onclick="toggleInfo(this)">
+<div>
+    <div>PER ISINGRUD</div>
+    <div>ULLENSAKER</div>
+    <div>3 903 740 kr</div>
+    <div><svg><use xlink:href="#down-caret"></use></svg></div>
+</div>
+<div>
+    <div>Org.nr. <span class="lab-til__id">959119252</span></div>
+    <div>Hvorav avløsertilskudd: <span>0 kr</span></div>
+</div>
+</div>
 
-// <div class="lab-til__entry" onclick="toggleInfo(this)">
-// <div>
-//     <div>JO POPPE</div>
-//     <div>FREDRIKSTAD</div>
-//     <div>2 744 778 kr</div>
-//     <div><svg><use xlink:href="#down-caret"></use></svg></div>
-// </div>
-// <div>
-//     <div>Org.nr. <span class="lab-til__id">974352869</span></div>
-//     <div>Hvorav avløsertilskudd: <span>87 800 kr</span></div>
-// </div>
-// </div>
+<div class="lab-til__entry" onclick="toggleInfo(this)">
+<div>
+    <div>BJERTNÆS OG HOEL AS</div>
+    <div>FÆRDER</div>
+    <div>3 768 480 kr</div>
+    <div><svg><use xlink:href="#down-caret"></use></svg></div>
+</div>
+<div>
+    <div>Org.nr. <span class="lab-til__id">98809473</span></div>
+    <div>Hvorav avløsertilskudd: <span>0 kr</span></div>
+</div>
+</div>
 
-// <div class="lab-til__entry" onclick="toggleInfo(this)">
-// <div>
-//     <div>ULLENES MORTEN</div>
-//     <div>STAVANGER</div>
-//     <div>2 691 655 kr</div>
-//     <div><svg><use xlink:href="#down-caret"></use></svg></div>
-// </div>
-// <div>
-//     <div>Org.nr. <span class="lab-til__id">982254868</span></div>
-//     <div>Hvorav avløsertilskudd: <span>87 800 kr</span></div>
-// </div>
-//     </div>`;
+<div class="lab-til__entry" onclick="toggleInfo(this)">
+<div>
+    <div>JO POPPE</div>
+    <div>FREDRIKSTAD</div>
+    <div>3 679 291 kr</div>
+    <div><svg><use xlink:href="#down-caret"></use></svg></div>
+</div>
+<div>
+    <div>Org.nr. <span class="lab-til__id">974352869</span></div>
+    <div>Hvorav avløsertilskudd: <span>96 580 kr</span></div>
+</div>
+    </div>`;
         return
 
     }
@@ -424,7 +424,7 @@ jQuery('#kommune-liste').on('change', function () {
 
     kommuneUrl = kommuneUrlBase + this.value;
     url = getUrl();
-    
+
     fetchAndPublish();
 });
 
@@ -521,7 +521,7 @@ async function getAllPages(pages) {
 }
 
 async function getData(url, kommuneUrl, i) {
-    setTimeout(() => {console.log(i);}, i*100)
+    setTimeout(() => { console.log(i); }, i * 100)
     let result = await jQuery.ajax({
         method: 'GET',
         tryCount: 0,
