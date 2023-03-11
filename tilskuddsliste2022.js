@@ -462,13 +462,16 @@ async function getAllPages(pages) {
     // }
 
     for (let i = 1; i <= pages; i++) {
-        if (i > 1) {
+        if (i > 10) {
             setTimeout(function () {
                 prom.push(getData(url, kommuneUrl, i));
-            }, 1000);
+            }, (i * 1000));
 
         } else {
-            promises.push(getData(url, kommuneUrl, i));
+            setTimeout(function () {
+                promises.push(getData(url, kommuneUrl, i));
+            }, (i * 250));
+            
         }
     }
 
