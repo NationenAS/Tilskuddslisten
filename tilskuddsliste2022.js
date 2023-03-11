@@ -461,7 +461,7 @@ async function getAllPages(pages) {
     // }
 
     for (let i = 1; i <= pages; i++) {
-        if(i > 10) return;
+        if(i > 10) pages = 10; return;
         if (i > 5) {
             setTimeout(() => {
                 prom.push(getData(url, kommuneUrl, i));
