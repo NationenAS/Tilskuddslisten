@@ -462,17 +462,16 @@ async function getAllPages(pages) {
     // }
 
     for (let i = 1; i <= pages; i++) {
-        if (i > 10) {
-            setTimeout(function () {
-                prom.push(getData(url, kommuneUrl, i));
-            }, (i * 1000));
 
-        } else {
-            setTimeout(function () {
-                promises.push(getData(url, kommuneUrl, i));
-            }, (i * 250));
+        promises.push(getData(url, kommuneUrl, i));
+        // if (i > 10) {            
+        //         prom.push(getData(url, kommuneUrl, i));          
+
+        // } else {            
+                
+        //     }
             
-        }
+        // }
     }
 
     //løser ut alle promises
@@ -520,11 +519,11 @@ async function getAllPages(pages) {
 
     setTimeout(() => {
         toManyPages();
-    }, 1100);
+    }, 15000);
 }
 
 async function getData(url, kommuneUrl, i) {
-    setTimeout(() => { console.log(i); }, i * 100)
+    setTimeout(() => { console.log(i); }, i * 200)
     let result = await jQuery.ajax({
         method: 'GET',
         tryCount: 0,
@@ -560,10 +559,6 @@ function prevPage() {
     }
     populateTablePage(data, page);
     refreshMeta();
-
-
-
-
 }
 
 function nextPage() {
@@ -593,7 +588,6 @@ function nextPage() {
 }
 
 function refreshMeta() {
-
     currentPage.innerHTML = page;
     totalPage.innerHTML = pages;
     hits.innerHTML = data.length;
