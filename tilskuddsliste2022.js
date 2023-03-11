@@ -105,6 +105,7 @@ async function populateTable(data) {
 
     table.innerHTML = ''; //tømmer tabellen for gamle resultat
     if (!data) {
+        console.log("no data");
         return
     }
 
@@ -409,8 +410,6 @@ async function fetchAndPublish() {
         return
     }
 
-
-
     let aall = await getAllPages(pp.pages);
 
     // populateTable(aall);
@@ -465,11 +464,8 @@ async function getAllPages(pages) {
         if (i > 40) {            
              prom.push(getData(url, kommuneUrl, i));            
 
-        } else {
-            setTimeout(function () {
+        } else {           
                 promises.push(getData(url, kommuneUrl, i));
-            }, (i * 250));
-            
         }
     }
 
