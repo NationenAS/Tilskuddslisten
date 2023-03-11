@@ -462,7 +462,7 @@ async function getAllPages(pages) {
     // }
 
     for (let i = 1; i <= pages; i++) {
-        if (i > 4) {            
+        if (i > 40) {            
              prom.push(getData(url, kommuneUrl, i));            
 
         } else {
@@ -516,9 +516,9 @@ async function getAllPages(pages) {
         });
     }
 
-    setTimeout(() => {
-        toManyPages();
-    }, 1500);
+    // setTimeout(() => {
+    //     toManyPages();
+    // }, 1500);
 }
 
 async function getData(url, kommuneUrl, i) {
