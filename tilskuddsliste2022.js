@@ -461,12 +461,15 @@ async function getAllPages(pages) {
     // }
 
     for (let i = 1; i <= pages; i++) {
-        if (i > 5) {            
-            prom.push(getData(url, kommuneUrl, i));    
+        if (i > 5) {
+            setTimeout(() => {
+                prom.push(getData(url, kommuneUrl, i));
+            }, 150 * i)            
+                
             console.log("for mange sider");        
 
         } else {           
-                promises.push(getData(url, kommuneUrl, i));
+            promises.push(getData(url, kommuneUrl, i));
         }
     }
 
@@ -484,7 +487,6 @@ async function getAllPages(pages) {
             } catch (error) {
                 console.log(error)
             }
-
 
             populateTable(data);
             refreshMeta();
