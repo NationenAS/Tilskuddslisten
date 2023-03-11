@@ -461,7 +461,7 @@ async function getAllPages(pages) {
     // }
 
     for (let i = 1; i <= pages; i++) {
-        if (i > 5) {            
+        if (i > 9) {            
             // prom.push(getData(url, kommuneUrl, i));    
             console.log("for mange sider");        
 
