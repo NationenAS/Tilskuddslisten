@@ -461,8 +461,8 @@ async function getAllPages(pages) {
     // }
 
     for (let i = 1; i <= pages; i++) {
-        if (i > 9) {            
-            // prom.push(getData(url, kommuneUrl, i));    
+        if (i > 5) {            
+            prom.push(getData(url, kommuneUrl, i));    
             console.log("for mange sider");        
 
         } else {           
@@ -513,9 +513,9 @@ async function getAllPages(pages) {
         });
     }
 
-    // setTimeout(() => {
-    //     toManyPages();
-    // }, 1500);
+    setTimeout(() => {
+        toManyPages();
+    }, 3000);
 }
 
 async function getData(url, kommuneUrl, i) {
