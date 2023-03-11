@@ -461,8 +461,9 @@ async function getAllPages(pages) {
     // }
 
     for (let i = 1; i <= pages; i++) {
-        if (i > 40) {            
-             prom.push(getData(url, kommuneUrl, i));            
+        if (i > 5) {            
+            // prom.push(getData(url, kommuneUrl, i));    
+            console.log("for mange sider");        
 
         } else {           
                 promises.push(getData(url, kommuneUrl, i));
@@ -518,7 +519,7 @@ async function getAllPages(pages) {
 }
 
 async function getData(url, kommuneUrl, i) {
-    setTimeout(() => { console.log(i); }, i * 150)
+    setTimeout(() => { console.log(i); }, i * 250)
     let result = await jQuery.ajax({
         method: 'GET',
         tryCount: 0,
