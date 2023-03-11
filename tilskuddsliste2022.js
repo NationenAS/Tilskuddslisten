@@ -462,7 +462,7 @@ async function getAllPages(pages) {
     // }
 
     for (let i = 1; i <= pages; i++) {
-        if (true) {
+        if (i > 1) {
             setTimeout(function () {
                 prom.push(getData(url, kommuneUrl, i));
             }, 1000);
@@ -473,28 +473,28 @@ async function getAllPages(pages) {
     }
 
     //løser ut alle promises
-    // Promise.all(promises)
-    //     .then((result) => {
+    Promise.all(promises)
+        .then((result) => {
 
-    //         for (let i = 0; i < result.length; i++) {
-    //             tempArray = tempArray.concat(result[i].entries);
-    //         }
+            for (let i = 0; i < result.length; i++) {
+                tempArray = tempArray.concat(result[i].entries);
+            }
 
-    //         data = tempArray; //lagrer dataen vi henter i data[]
-    //         try {
-    //             data = data.sort(compare2); //sorterer etter tilskudd mest til minst
-    //         } catch (error) {
-    //             console.log(error)
-    //         }
+            data = tempArray; //lagrer dataen vi henter i data[]
+            try {
+                data = data.sort(compare2); //sorterer etter tilskudd mest til minst
+            } catch (error) {
+                console.log(error)
+            }
 
 
-    //         populateTable(data);
-    //         refreshMeta();
-    //         document.querySelector("#lab-til__scroll_to").scrollIntoView();
+            populateTable(data);
+            refreshMeta();
+            document.querySelector("#lab-til__scroll_to").scrollIntoView();
 
-    //         return tempArray
+            return tempArray
 
-    //     }).catch(err => console.log("error ", err))
+        }).catch(err => console.log("error ", err))
 
     function toManyPages() {
         Promise.all(prom).then((result2) => {
