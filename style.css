@@ -1,3 +1,6 @@
+* {
+  box-sizing: content-box;
+}
 .lab-til {
   margin: 40px auto;
   font-family: adelle_sansregular, sans-serif;
@@ -18,13 +21,17 @@
   height: 45px;
   font-size: 18px;
   vertical-align: middle;
-  padding: 8px 13px;
+  padding: 4px 8px;
   margin: 0;
   -webkit-appearance: none;
   background: white;
   outline: 0;
   border-radius: 0;
   background-clip: padding-box;
+}
+
+.lab-til__form-munic {
+  text-align: center;
 }
 .lab-til__meta{
   display: flex;
@@ -124,7 +131,7 @@
 
 @media screen and (max-width: 480px) {
   .lab-til {
-      margin: 40px -12px;
+      margin: 40px 0px;
   }
   .lab-til h2 {
       margin-left: 12px;
@@ -134,6 +141,10 @@
   }
   .lab-til__entry > div:nth-child(1) {
       font-size: 16px;
+  }
+
+  .lab-til__meta_number {
+    font-size: 14px;
   }
 }
 
